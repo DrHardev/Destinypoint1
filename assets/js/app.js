@@ -1,5 +1,5 @@
 (function () {
-  var NUM = '919386181050', UPI = '9386181050@okbizaxis', PHYS = 100, PINHASH = 5533239574072353;
+  var NUM = '919386181050', UPI = '9386181050@okbizaxis', PHYS = 399, PINHASH = 5533239574072353;
   function h53(str, seed) {
     var h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
     for (var i = 0, ch; i < str.length; i++) { ch = str.charCodeAt(i); h1 = Math.imul(h1 ^ ch, 2654435761); h2 = Math.imul(h2 ^ ch, 1597334677); }
@@ -123,7 +123,7 @@
     $('b_title').textContent = 'वधू (Girl) का विवरण';
     $('addr').hidden = fmt() !== 'phys';
     $('total').textContent = '₹' + amount();
-    $('totalsub').textContent = fmt() === 'phys' ? 'PDF + छपी हुई कॉपी (+₹100) · चर्चा शामिल' : 'PDF · चर्चा शामिल';
+    $('totalsub').textContent = fmt() === 'phys' ? 'PDF + छपी हुई कॉपी (+₹399) · चर्चा शामिल' : 'PDF · चर्चा शामिल';
   }
   document.querySelectorAll('input[name=svc], input[name=fmt]').forEach(function (r) { r.addEventListener('change', sync); });
   sync();
@@ -151,7 +151,7 @@
     var t = 'Namaste Pandit ji, I want to order from Destiny Point.\n' +
       'Order ID: ' + orderId + '\n' +
       'Service: ' + s.n + '\n' +
-      'Delivery: ' + (phys ? 'PDF + Physical copy (+Rs 100)' : 'PDF') + '\n' +
+      'Delivery: ' + (phys ? 'PDF + Physical copy (+Rs 399)' : 'PDF') + '\n' +
       'Amount: Rs ' + amount() + '\n\n';
     if (s.k === 'milan') t += personText('a', 'Boy details') + '\n\n' + personText('b', 'Girl details');
     else t += personText('a', 'Details');
